@@ -4,6 +4,7 @@
   "private": true,
   "description": "A simple contact app using React and Firebase.",
   "dependencies": {
+    "firebase": "^4.1.2",
     "react": "^15.6.0",
     "react-dom": "^15.6.0"
   },
@@ -17,11 +18,11 @@
   },
   "devDependencies": {
     "browserify": "*",
-    "flux":"*",
-    "gulp":"*",
-    "reactify":"*",
-    "vinyl-source-stream":"*",
-    "object-assign":"*"
+    "flux": "*",
+    "gulp": "*",
+    "reactify": "*",
+    "vinyl-source-stream": "*",
+    "object-assign": "*"
   },
   "scripts": {
     "deploy": "gh-pages -d web/dist",
