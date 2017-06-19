@@ -21,13 +21,13 @@ var AddForm = React.createClass({
 				<h3>Add Contact</h3>
 				<form onSubmit={this.handleSubmit} >
 					<div className="form-group">
-						<input type="text" ref="name" className="form-control" placeholder="Contact name" />
+						<input type="text" ref="name" className="form-control" placeholder="Contact name" required />
 					</div>
 					<div className="form-group">
-						<input type="text" ref="phone" className="form-control" placeholder="Contact phone" />
+						<input type="text" ref="phone" className="form-control" placeholder="Contact phone" required />
 					</div>
 					<div className="form-group">
-						<input type="email" ref="email" className="form-control" placeholder="Contact email" />
+						<input type="email" ref="email" className="form-control" placeholder="Contact email" required />
 					</div>
 					<button type="submit" className="btn btn-primary">Submit</button>
 				</form>

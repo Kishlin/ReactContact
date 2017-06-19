@@ -16,6 +16,27 @@ module.exports = {
 		return newKey;
 	},
 
+	removeContact: function(contactId) {
+		var database = firebase.database();
+		firebase.database().ref('/contacts/' + contactId).remove();
+	},
+
+	updateContact: function(contact) {
+		var database = firebase.database();
+		var id = contact.id;
+		var updateContact = {
+			name: contact.name,
+			phone: contact.phone,
+			email: contact.email
+		}
+
+
+		var updates = {};
+		updates['/contacts/' + id] = updateContact;
+
+		return firebase.database().ref().update(updates);
+	},
+
 	getContacts: function(){
 		var database = firebase.database();
 		database.ref().once('value', function(snapshot) {
